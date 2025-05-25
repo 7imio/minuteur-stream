@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TimerPage from "./TimerPage";
-import TimerConfigurator from "./TimerCOnfigurator";
+import TimerConfigurator from "./TimerConfigurator";
 
 const App = () => (
   <BrowserRouter>
