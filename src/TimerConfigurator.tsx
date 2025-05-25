@@ -52,9 +52,7 @@ const TimerConfigurator = () => {
   const [decoration, setDecoration] = useState(true);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(
-      `${window.location.origin}${generateUrl()}`
-    );
+    await navigator.clipboard.writeText(generateUrl());
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
