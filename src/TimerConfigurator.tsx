@@ -40,7 +40,7 @@ const TimerConfigurator = () => {
     url.set("font", encodeURIComponent(font));
     url.set("decoration", decoration.toString());
 
-    return `${window.location.origin}/minuteur/${seconds}?${url.toString()}`;
+    return `${window.location}/minuteur/${seconds}?${url.toString()}`;
   };
 
   const handleGenerate = () => {
@@ -52,7 +52,9 @@ const TimerConfigurator = () => {
   const [decoration, setDecoration] = useState(true);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(`${generateUrl()}`);
+    await navigator.clipboard.writeText(
+      `${window.location.origin}${generateUrl()}`
+    );
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
