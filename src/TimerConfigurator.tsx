@@ -40,7 +40,7 @@ const TimerConfigurator = () => {
     url.set("font", encodeURIComponent(font));
     url.set("decoration", decoration.toString());
 
-    return `${window.location}/minuteur/${seconds}?${url.toString()}`;
+    return `${window.location.origin}/minuteur/${seconds}?${url.toString()}`;
   };
 
   const handleGenerate = () => {
