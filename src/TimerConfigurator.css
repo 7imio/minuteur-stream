@@ -58,3 +58,7 @@ button:hover {
   margin-top: 1rem;
   word-break: break-word;
 }
+
+iframe {
+  overflow: hidden;
+}
